@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Blog.Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="about_blog">
+    <Key>
+      <PropertyRef Name="blog_id" />
+    </Key>
+    <Property Name="blog_id" Type="Int32" Nullable="false" />
+    <Property Name="blog_keyword" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="blog_description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="blog_name" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="blog_title" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="articl_tip">
+    <Key>
+      <PropertyRef Name="tip_id" />
+    </Key>
+    <Property Name="tip_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="receive_user_id" Type="Int32" Nullable="false" />
+    <Property Name="tip_article" Type="Int32" Nullable="false" />
+    <Property Name="tip_count" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="article_sort">
+    <Key>
+      <PropertyRef Name="sort_article_id" />
+    </Key>
+    <Property Name="sort_article_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="sort_article_name" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="blog_article">
+    <Key>
+      <PropertyRef Name="article_id" />
+    </Key>
+    <Property Name="article_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="article_name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="article_time" Type="DateTime" Nullable="false" />
+    <Property Name="article_click" Type="Int32" Nullable="false" />
+    <Property Name="sort_article_id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="article_content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="article_up" Type="Byte" Nullable="false" />
+    <Property Name="article_support" Type="Byte" Nullable="false" />
+    <Property Name="like_count" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="blog_user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="group_id" Type="Int32" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_pwd" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_phone" Type="Int32" />
+    <Property Name="user_sex" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_mark" Type="Int32" Nullable="false" />
+    <Property Name="user_last_login_ip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_birthday" Type="DateTime" Precision="3" />
+    <Property Name="user_description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="user_image_url" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_school" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="user_register_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="user_register_ip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_lock" Type="Byte" Nullable="false" />
+    <Property Name="user_freeze" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="secret_message">
+    <Key>
+      <PropertyRef Name="secret_id" />
+    </Key>
+    <Property Name="secret_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="send_id" Type="Int32" Nullable="false" />
+    <Property Name="receive_id" Type="Int32" Nullable="false" />
+    <Property Name="message_topic" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="message_content" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="stay_message">
+    <Key>
+      <PropertyRef Name="stay_id" />
+    </Key>
+    <Property Name="stay_id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="stay_user_id" Type="Int32" Nullable="false" />
+    <Property Name="message_content" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="stay_user_ip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="message_stay_time" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_attention">
+    <Key>
+      <PropertyRef Name="a_id" />
+    </Key>
+    <Property Name="a_id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="attention_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BlogDataModel" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="about_blog" EntityType="Self.about_blog" />
+    <EntitySet Name="articl_tip" EntityType="Self.articl_tip" />
+    <EntitySet Name="article_sort" EntityType="Self.article_sort" />
+    <EntitySet Name="blog_article" EntityType="Self.blog_article" />
+    <EntitySet Name="blog_user" EntityType="Self.blog_user" />
+    <EntitySet Name="secret_message" EntityType="Self.secret_message" />
+    <EntitySet Name="stay_message" EntityType="Self.stay_message" />
+    <EntitySet Name="user_attention" EntityType="Self.user_attention" />
+    <EntitySet Name="Blog_Comment" EntityType="Blog.Models.Blog_Comment" />
+  </EntityContainer>
+  <EntityType Name="Blog_Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PostID" Type="Int32" Nullable="false" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Body" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

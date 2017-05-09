@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Blog.Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="about_blog">
+    <Key>
+      <PropertyRef Name="blog_id" />
+    </Key>
+    <Property Name="blog_id" Type="int" Nullable="false" />
+    <Property Name="blog_keyword" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="blog_description" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="blog_name" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="blog_title" Type="varchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="articl_tip">
+    <Key>
+      <PropertyRef Name="tip_id" />
+    </Key>
+    <Property Name="tip_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="receive_user_id" Type="int" Nullable="false" />
+    <Property Name="tip_article" Type="int" Nullable="false" />
+    <Property Name="tip_count" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="article_sort">
+    <Key>
+      <PropertyRef Name="sort_article_id" />
+    </Key>
+    <Property Name="sort_article_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="sort_article_name" Type="varchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityType Name="blog_article">
+    <Key>
+      <PropertyRef Name="article_id" />
+    </Key>
+    <Property Name="article_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="article_name" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="article_time" Type="datetime" Nullable="false" />
+    <Property Name="article_click" Type="int" Nullable="false" />
+    <Property Name="sort_article_id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="article_content" Type="text" Nullable="false" />
+    <Property Name="article_up" Type="tinyint" Nullable="false" />
+    <Property Name="article_support" Type="tinyint" Nullable="false" />
+    <Property Name="like_count" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Blog_Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PostID" Type="int" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Body" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="blog_user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="group_id" Type="int" Nullable="false" />
+    <Property Name="user_name" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="user_pwd" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="user_phone" Type="int" />
+    <Property Name="user_sex" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="user_email" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="user_mark" Type="int" Nullable="false" />
+    <Property Name="user_last_login_ip" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="user_birthday" Type="datetime" />
+    <Property Name="user_description" Type="varchar" MaxLength="255" />
+    <Property Name="user_image_url" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="user_school" Type="varchar" MaxLength="255" />
+    <Property Name="user_register_time" Type="datetime" Nullable="false" />
+    <Property Name="user_register_ip" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="user_lock" Type="tinyint" Nullable="false" />
+    <Property Name="user_freeze" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="secret_message">
+    <Key>
+      <PropertyRef Name="secret_id" />
+    </Key>
+    <Property Name="secret_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="send_id" Type="int" Nullable="false" />
+    <Property Name="receive_id" Type="int" Nullable="false" />
+    <Property Name="message_topic" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="message_content" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="stay_message">
+    <Key>
+      <PropertyRef Name="stay_id" />
+    </Key>
+    <Property Name="stay_id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="stay_user_id" Type="int" Nullable="false" />
+    <Property Name="message_content" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="stay_user_ip" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="message_stay_time" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_attention">
+    <Key>
+      <PropertyRef Name="a_id" />
+    </Key>
+    <Property Name="a_id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="attention_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BlogModelsStoreContainer">
+    <EntitySet Name="about_blog" EntityType="Self.about_blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="articl_tip" EntityType="Self.articl_tip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="article_sort" EntityType="Self.article_sort" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="blog_article" EntityType="Self.blog_article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog_Comment" EntityType="Self.Blog_Comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="blog_user" EntityType="Self.blog_user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="secret_message" EntityType="Self.secret_message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stay_message" EntityType="Self.stay_message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user_attention" EntityType="Self.user_attention" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

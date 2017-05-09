@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BlogModelsStoreContainer" CdmEntityContainer="BlogDataModel">
+    <EntitySetMapping Name="about_blog">
+      <EntityTypeMapping TypeName="Blog.Models.about_blog">
+        <MappingFragment StoreEntitySet="about_blog">
+          <ScalarProperty Name="blog_id" ColumnName="blog_id" />
+          <ScalarProperty Name="blog_keyword" ColumnName="blog_keyword" />
+          <ScalarProperty Name="blog_description" ColumnName="blog_description" />
+          <ScalarProperty Name="blog_name" ColumnName="blog_name" />
+          <ScalarProperty Name="blog_title" ColumnName="blog_title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="articl_tip">
+      <EntityTypeMapping TypeName="Blog.Models.articl_tip">
+        <MappingFragment StoreEntitySet="articl_tip">
+          <ScalarProperty Name="tip_id" ColumnName="tip_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="receive_user_id" ColumnName="receive_user_id" />
+          <ScalarProperty Name="tip_article" ColumnName="tip_article" />
+          <ScalarProperty Name="tip_count" ColumnName="tip_count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="article_sort">
+      <EntityTypeMapping TypeName="Blog.Models.article_sort">
+        <MappingFragment StoreEntitySet="article_sort">
+          <ScalarProperty Name="sort_article_id" ColumnName="sort_article_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="sort_article_name" ColumnName="sort_article_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blog_user">
+      <EntityTypeMapping TypeName="Blog.Models.blog_user">
+        <MappingFragment StoreEntitySet="blog_user">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="user_pwd" ColumnName="user_pwd" />
+          <ScalarProperty Name="user_phone" ColumnName="user_phone" />
+          <ScalarProperty Name="user_sex" ColumnName="user_sex" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_mark" ColumnName="user_mark" />
+          <ScalarProperty Name="user_last_login_ip" ColumnName="user_last_login_ip" />
+          <ScalarProperty Name="user_birthday" ColumnName="user_birthday" />
+          <ScalarProperty Name="user_description" ColumnName="user_description" />
+          <ScalarProperty Name="user_image_url" ColumnName="user_image_url" />
+          <ScalarProperty Name="user_school" ColumnName="user_school" />
+          <ScalarProperty Name="user_register_time" ColumnName="user_register_time" />
+          <ScalarProperty Name="user_register_ip" ColumnName="user_register_ip" />
+          <ScalarProperty Name="user_lock" ColumnName="user_lock" />
+          <ScalarProperty Name="user_freeze" ColumnName="user_freeze" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="secret_message">
+      <EntityTypeMapping TypeName="Blog.Models.secret_message">
+        <MappingFragment StoreEntitySet="secret_message">
+          <ScalarProperty Name="secret_id" ColumnName="secret_id" />
+          <ScalarProperty Name="send_id" ColumnName="send_id" />
+          <ScalarProperty Name="receive_id" ColumnName="receive_id" />
+          <ScalarProperty Name="message_topic" ColumnName="message_topic" />
+          <ScalarProperty Name="message_content" ColumnName="message_content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stay_message">
+      <EntityTypeMapping TypeName="Blog.Models.stay_message">
+        <MappingFragment StoreEntitySet="stay_message">
+          <ScalarProperty Name="stay_id" ColumnName="stay_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="stay_user_id" ColumnName="stay_user_id" />
+          <ScalarProperty Name="message_content" ColumnName="message_content" />
+          <ScalarProperty Name="stay_user_ip" ColumnName="stay_user_ip" />
+          <ScalarProperty Name="message_stay_time" ColumnName="message_stay_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_attention">
+      <EntityTypeMapping TypeName="Blog.Models.user_attention">
+        <MappingFragment StoreEntitySet="user_attention">
+          <ScalarProperty Name="a_id" ColumnName="a_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="attention_id" ColumnName="attention_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blog_Comment">
+      <EntityTypeMapping TypeName="Blog.Models.Blog_Comment">
+        <MappingFragment StoreEntitySet="Blog_Comment">
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blog_article">
+      <EntityTypeMapping TypeName="IsTypeOf(Blog.Models.blog_article)">
+        <MappingFragment StoreEntitySet="blog_article">
+          <ScalarProperty Name="like_count" ColumnName="like_count" />
+          <ScalarProperty Name="article_support" ColumnName="article_support" />
+          <ScalarProperty Name="article_up" ColumnName="article_up" />
+          <ScalarProperty Name="article_content" ColumnName="article_content" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="sort_article_id" ColumnName="sort_article_id" />
+          <ScalarProperty Name="article_click" ColumnName="article_click" />
+          <ScalarProperty Name="article_time" ColumnName="article_time" />
+          <ScalarProperty Name="article_name" ColumnName="article_name" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
