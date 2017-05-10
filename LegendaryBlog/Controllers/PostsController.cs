@@ -25,6 +25,25 @@ namespace LegendaryBlog.Controllers
 
             return View(posts.Take(PostsPerPage));
         }
+        public ActionResult Details(int id)
+        {
+            Post post = GetPost(id);
+            ViewBag.IsAdmin = IsAdmin;
+            return View(post);
+        }
+        [ValidateInput(false)]
+        public ActionResult Comment(int id,string sendID,string body)
+        {
+            Post post = GetPost(id);
+            Comment comment = new Comment();
+            comment.Post = post;
+            comment.DateTime = DateTime.Now;
+            comment.SendID =Convert.ToInt32(sendID);
+            comment.Body = body;
+            model.Comments.Add(comment);
+            model.SaveChanges();
+            return RedirectToAction("Details",new { id=id});
+        }
         [ValidateInput(false)]
         public ActionResult Update(int? id,string title,string body,DateTime dateTime,string tags)
         {
