@@ -21,6 +21,13 @@
                    <span class="tag"><a href="@Href("~/Posts/Tags/"+tag.Name)">@tag.Name</a></span>
                }
            </div>
+           @if (isAdmin)
+           {
+               <div class="postControlPanel">
+                   <a href="@Href("~/Posts/Delete/"+post.Id)">Delete</a>
+                   <a href="@Href("~/Posts/Edit/"+post.Id)">Edit</a>
+               </div>
+           }
        </div>
    </div>
 if (ShowComments) {
@@ -37,6 +44,12 @@ if (ShowComments) {
                     said:
                     <div class="commentBody">@html.Raw(html.Encode(comment.Body).Replace("\n","<br/>"))</div>
                     <div class="commentTime"> at @comment.DateTime.ToString("HH:MM") on @comment.DateTime.ToString("yyyy/mm/dd")</div>
+                    @if (isAdmin)
+                    {
+                        <div class="commentControlPanel">
+                            <a href="@Href("~/Posts/DeleteComment/" + comment.Id)">Delete</a>
+                        </div>
+                    }
                 </div>
             }
             <div id="commentEditor"></div>

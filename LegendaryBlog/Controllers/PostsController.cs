@@ -44,6 +44,14 @@ namespace LegendaryBlog.Controllers
             model.SaveChanges();
             return RedirectToAction("Details",new { id=id});
         }
+        public ActionResult Tags(string id)
+        {
+            Tag tag = GetTag(id);
+            ViewBag.IsAdmin = IsAdmin;
+            return View("~Posts/Index,",tag.Posts);
+        }
+
+
         [ValidateInput(false)]
         public ActionResult Update(int? id,string title,string body,DateTime dateTime,string tags)
         {
@@ -66,6 +74,27 @@ namespace LegendaryBlog.Controllers
             model.SaveChanges();
             return RedirectToAction("Details",new { id = post.Id});
         }
+        public ActionResult Delete(int id)
+        {
+            if (IsAdmin)
+            {
+                Post post = GetPost(id);
+                model.Posts.Remove(post);
+                model.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
+        public ActionResult DeleteComment(int id)
+        {
+            if (IsAdmin)
+            {
+                Comment comment = model.Comments.Where(x => x.Id == id).First();
+                model.Comments.Remove(comment);
+                model.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
+
         private Tag GetTag(string tagName)
         {
             return model.Tags.Where(x=>x.Name==tagName).FirstOrDefault()??new Tag() { Name=tagName};
