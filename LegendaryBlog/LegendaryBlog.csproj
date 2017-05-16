@@ -169,6 +169,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -206,11 +207,29 @@
     <Compile Include="ViewModels\RegisterUser.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\0004 .png" />
+    <Content Include="Content\img\0005.png" />
+    <Content Include="Content\img\003.png" />
+    <Content Include="Content\img\004.png" />
+    <Content Include="Content\img\005.png" />
+    <Content Include="Content\img\006.png" />
+    <Content Include="Content\img\007.png" />
+    <Content Include="Content\img\bulb.png" />
+    <Content Include="Content\img\home.png" />
+    <Content Include="Content\img\like.png" />
+    <Content Include="Content\img\mailfront.png" />
+    <Content Include="Content\img\male.png" />
     <Content Include="Content\img\password.png" />
+    <Content Include="Content\img\pen.png" />
+    <Content Include="Content\img\pencil.png" />
+    <Content Include="Content\img\picasa.png" />
     <Content Include="Content\img\pika.png" />
     <Content Include="Content\img\pika1.png" />
+    <Content Include="Content\img\screen.png" />
+    <Content Include="Content\img\search.png" />
     <Content Include="Content\img\tooptip.png" />
     <Content Include="Content\img\user.png" />
     <Content Include="Content\img\yanzheng.png" />
@@ -231,6 +250,7 @@
       <DependentUpon>BlogModel.edmx</DependentUpon>
       <LastGenOutput>BlogModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\BlogModel.edmx">
@@ -246,6 +266,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -270,6 +291,8 @@
     <Content Include="Views\Posts\Index.cshtml" />
     <Content Include="Views\Posts\Details.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Page\Index.cshtml" />
+    <Content Include="Views\Page\Article.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
