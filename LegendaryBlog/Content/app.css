@@ -1,0 +1,268 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+.bg001{
+    width:100%;
+	height:100%;
+    background:url(img/007.png) 0px 0px no-repeat;
+	
+    background-attachment:fixed;
+
+}
+#d1{
+    width:500px;
+    height: 100%;
+    float: left;
+
+}
+#d2{
+    width:800px;
+    height: 100%;
+    float: left;
+
+}
+#d01{
+    -webkit-box-shadow: 4px 4px 15px #696969;
+
+
+    background: rgba(0, 0, 0, 0.07) none repeat scroll 0 0 !important;
+    height: 150px;
+    width:400px;
+    margin-left: 50px;
+    margin-top: 30px;
+    font-family: "黑体";
+    float: left;
+
+    text-align: right;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+#d01_1{
+
+     width: 200px;
+    float: left;
+    padding-right: 50px;
+
+
+ }
+.c01{
+    margin-left: 0px;
+    color: rgba(255, 255, 255, 0.5);
+    padding-left: 0px;
+    padding-bottom: 2px;
+    margin-bottom: 0px;
+    font-size: 50px;
+
+}
+.c02{
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 2px;
+    color: white;
+    font-size: 30px;
+}
+#d01_2{
+    width: 100px;
+    height: 100px;
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    float: left;
+}
+#d02{
+    -webkit-box-shadow: 4px 4px 15px #696969;
+
+    background: rgba(0, 0, 0, 0.07) none repeat scroll 0 0 !important;
+    height: 350px;
+    width:450px;
+    margin-left: 50px;
+    margin-top: 25px;
+    font-family: "黑体";
+    float: left;
+
+
+
+
+}
+.d02_0{
+    width: 450px;
+    height: 60px;
+    float: left;
+    border-bottom: 1px solid white;
+
+}
+
+
+#d02_1{
+    width: 450px;
+    height: 60px;
+    float: left;
+    border-bottom: 1px solid white;
+
+
+}
+
+#d02_2{
+     width: 450px;
+     height: 60px;
+     float: left;
+     border-bottom: 1px solid white;
+
+ }
+#d02_3{
+      width: 450px;
+      height: 60px;
+      float: left;
+      border-bottom: 1px solid white;
+
+  }
+#d02_4{
+       width: 450px;
+       height: 60px;
+       float: left;
+       border-bottom: 1px solid white;
+
+   }
+#d02_5{
+    width: 450px;
+    height: 60px;
+    float: left;
+    border-bottom: 1px solid white;
+
+}
+.c03{
+    font-size: 60px;
+    font-family: 黑体;
+    color: white;
+
+    text-align: center;
+
+}
+
+#d03{
+    -webkit-box-shadow: 4px 4px 15px #696969;
+
+    background: rgba(0, 0, 0, 0.07) none repeat scroll 0 0 !important;
+    height: 575px;
+    width:750px;
+    margin-left: 50px;
+    margin-top: 30px;
+    font-family: "黑体";
+    float: left;
+    display: none;
+    opacity: 0.8;
+}
+#d03_1{
+    height: 575px;
+    width:750px;
+    display: none;
+}
+#d03_2{
+    height: 575px;
+    width:750px;
+    display: none;
+}
+#d03_3{
+    height: 575px;
+    width:750px;
+    display: none;
+}
+#d03_4{
+    height: 575px;
+    width:750px;
+    display: none;
+}
+#d03_5{
+    height: 575px;
+    width:750px;
+    display: none;
+}
+#art1{
+    width: 80px;
+    height: 100%;
+    z-index:1;
+    position:fixed;
+
+}
+#art1_1{
+    width: 80px;
+    height: 80px;
+    margin-top: 0px;
+    text-align: center;
+    float: left;
+
+}
+#art1_2{
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    text-align: center;
+    float: left;
+}
+#art1_3{
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    text-align: center;
+    float: left;
+}
+#art1_4{
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    text-align: center;
+    float: left;
+}
+#art1_up{
+    width: 80px;
+    height: 80px;
+    margin-top: 60px;
+    text-align: center;
+    float: left;
+
+}
+#art1_down{
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    text-align: center;
+    float: left;
+}
+#art1-up:hover{
+    width: 45px;
+    height: 23px;
+    margin-left: 18px;
+
+}
+#art1-down:hover{
+    width: 45px;
+    height: 23px;
+    margin-left: 18px;
+
+}
+#art1-1:hover{
+    width: 45px;
+    height: 45px;
+    margin-left: 18px;
+
+}
+#art1-2:hover{
+    width: 45px;
+    height: 45px;
+    margin-left: 18px;
+}
+#art1-3:hover{
+    width: 45px;
+    height: 45px;
+    margin-left: 18px;;
+
+}
+#art1-4:hover{
+    width: 45px;
+    height: 45px;
+    margin-left: 18px;
+
+
+}
