@@ -8,7 +8,6 @@ namespace LegendaryBlog.Controllers
 {
     public class AccountController : Controller
     {
-        BlogModel model = new BlogModel();
         // GET: Account
         public ActionResult Index()
         {
@@ -16,8 +15,28 @@ namespace LegendaryBlog.Controllers
         }
         public ActionResult Register()
         {
-
             return View();
+        }
+        [HttpPost]
+        public ActionResult UserRegister(string name,string pwd,string code)
+        {
+            BlogUser user = new BlogUser();
+            user.Username = name;
+            user.Password = pwd;
+            int res = 0;
+            using (BlogModel model1 = new BlogModel())
+            {
+                model1.BlogUsers.Add(user);
+                res=model1.SaveChanges();
+            }
+            if (res > 0)
+            {
+                return Redirect("/");
+            }
+            else
+            {
+                return Content("注册失败");
+            }
         }
         [AllowAnonymous]
         public ActionResult GetValidateCode()
@@ -28,6 +47,5 @@ namespace LegendaryBlog.Controllers
             byte[] bytes = vCode.CreateValidateGraphic(code);
             return File(bytes, @"image/jpeg");
         }
-
     }
 }

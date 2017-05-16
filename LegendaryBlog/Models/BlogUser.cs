@@ -11,11 +11,15 @@ namespace LegendaryBlog.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class BlogUser
     {
+        [Key]
         public int ID { get; set; }
+        [StringLength(maximumLength:16,MinimumLength =6)]
         public string Username { get; set; }
+        [StringLength(maximumLength:16,MinimumLength =6)]
         public string Password { get; set; }
     }
 }
