@@ -20,6 +20,9 @@ namespace LegendaryBlog.Controllers
         [HttpPost]
         public ActionResult UserRegister(string name,string pwd,string code)
         {
+            string a = name;
+            string b = pwd;
+            string c = code;
             BlogUser user = new BlogUser();
             user.Username = name;
             user.Password = pwd;

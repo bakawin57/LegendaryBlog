@@ -1,24 +1,18 @@
 ﻿@model LegendaryBlog.ViewModels.RegisterUser
-@{
-    ViewBag.Title = "Register";
-}
-
-<!doctype html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="Generator" content="EditPlus?">
     <meta name="Author" content="">
     <meta name="Keywords" content="">
     <meta name="Description" content="">
+
+    <title>Document</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <title>Document</title>
-
-   <script>
+    <script>
  $("document").ready(function(){
  $(".password").focus(function(){
 $(".pika1").show();
@@ -26,7 +20,7 @@ $(".pika1").show();
   $(".password").blur(function(){
   $(".pika1").hide();
   });
-$(".username").focus(function(){
+$(".user").focus(function(){
 $("#word").html("这个很重要哦");
 });
 $(".password").focus(function(){
@@ -81,7 +75,7 @@ $("#word").html("最后一步了哦");
                 height: 40px;
             }
 
-        #code {
+        #input1 {
             margin-top: 20px;
             height: 20px;
             width: 10em;
@@ -115,7 +109,7 @@ $("#word").html("最后一步了哦");
             color: #f0e4e4;
         }
 
-        #btnSubmit {
+        #button1 {
             color: white;
             float: right;
             margin-top: 20px;
@@ -135,12 +129,11 @@ $("#word").html("最后一步了哦");
             position: absolute;
             margin-top: 27px;
             margin-left: 22px;
-            color: #999999;
+            color:#999999;
         }
-
-            a:hover {
-                color: red;
-            }
+        a:hover{
+            color:red;
+        }
 
         #pika {
             width: 100px;
@@ -156,66 +149,66 @@ $("#word").html("最后一步了哦");
             position: absolute;
             margin-top: -13em;
             margin-left: 11em;
+          
         }
-
-        #tooltip2 {
+        #tooltip2{
             width: 128px;
             height: 104px;
             position: absolute;
-            margin-top: 65px;
-            margin-left: 55px;
+           margin-top:65px;
+           margin-left:55px;
+
         }
 
         #word {
             position: absolute;
             margin-top: -7.2em;
             margin-left: 15.2em;
-            font-family: "黑体";
+            font-family:"黑体";
             color: #5858cf;
         }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+color: #cfcfcf; 
+} 
+#valiCode{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 28px;
 
-        input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-            color: #cfcfcf;
-        }
-
-        #valiCode {
-            position: absolute;
-            margin-top: 30px;
-            margin-left: 28px;
-        }
+}
     </style>
 </head>
 <body>
     <div>
         <div id="top_div"></div>
         <div id="bottom_div"></div>
-        <div id="main">
+         <div id="main">
         <div id="tooltip">
-            <img src="~/Content/img/tooptip.png" id="tooltip2" />
-            </div>
+             <img src="~/content/img/tooltip.png" id="tooltip2"/>
+             </div>
         <div id="word">亲，pika~~<br />&nbsp;&nbsp;请完成注册</div>
         <img src="~/content/img/pika.png" id="pika" />
         <img src="~/content/img/pika1.png" id="pika" style="display:none" class="pika1" />
         <h1>注册</h1><img src="~/content/img/user.png" id="img1" />
-            @using (Html.BeginForm("UserRegister", "Account", FormMethod.Post))
-            { 
-                @Html.TextBoxFor(m=>m.Username,new { @class="username", placeholder = "请输入用户民或邮箱" })
-                @Html.ValidationMessageFor(m => m.Username)
-                <img src="~/content/img/password.png" id="img2" />
-                @Html.PasswordFor(m=>m.Password,new {@class="password",placeholder="请输入密码"});
-                @Html.ValidationMessageFor(m=>m.Password);
-                <img src="~/content/img/password.png" id="img2" />
-                @Html.PasswordFor(m => m.rePassword, new { @class = "password", placeholder="请确认输入密码" });
-                @Html.ValidationMessageFor(m=>m.rePassword)
-                <img src="~/content/img/yanzheng.png" id="img2" />
-                @Html.TextBoxFor(m=>m.Code,new {@class="code",placeholder="输入验证码" })
-                @Html.ValidationMessageFor(m=>m.Code)
-                <img id="valiCode" style="cursor: pointer;" class="col-md-2 control-label" src="/Account/GetValidateCode" alt="验证码" />
-                <hr /><a href="#">转到登录</a>
-                <input type="submit" value="注册" />
-            }
-        </div>
-        
+         @using (Html.BeginForm("UserRegister","Account",FormMethod.Post))
+         {
+        @Html.TextBoxFor(m=>m.Username,new {@class="user",@id="text1",placeholder="请输入用户名和密码" });
+        @Html.ValidationMessageFor(m=>m.Username)
+        <img src="~/content/img/password.png" id="img2" />
+        @Html.PasswordFor(m => m.Password, new { @class = "password", @id = "text1", placeholder = "请输入密码" });
+        @Html.ValidationMessageFor(m => m.Password)
+        <img src="~/content/img/password.png" id="img2" />
+        @Html.PasswordFor(m => m.rePassword, new { @class = "password", @id = "text1", placeholder = "请输确认密码" });
+        @Html.ValidationMessageFor(m => m.rePassword)
+        <img src="~/content/img/yanzheng.png" id="img2" />
+        @Html.TextBoxFor(m => m.Code, new { @class = "user", @id = "input1", placeholder = "请输入验证码" });
+        @Html.ValidationMessageFor(m => m.Code)
+        <img id="valiCode" style="cursor: pointer;" class="col-md-2 control-label" src="/Home/GetValidateCode" alt="验证码" /><hr />
+        <a href="#">转到登录</a>
+        <input type="submit" value="注册" id="button1" />
+         }
+         </div>
     </div>
 </body>
 </html>
+

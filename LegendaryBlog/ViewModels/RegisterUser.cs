@@ -8,16 +8,16 @@ namespace LegendaryBlog.ViewModels
     public class RegisterUser
     {
         [StringLength(maximumLength:16,MinimumLength =6)]
-        [Required]
+        [Required(ErrorMessage = "必填")]
         public string Username { get; set; }
         [StringLength(maximumLength:16,MinimumLength =6)]
-        [Required]
+        [Required(ErrorMessage = "必填")]
         public string Password { get; set; }
         [StringLength(maximumLength: 16, MinimumLength = 6)]
-        [Required]
-        [Compare("Password")]
+        [Required(ErrorMessage ="必填")]
+        [Compare("Password",ErrorMessage ="密码必须相同")]
         public string rePassword { get; set; }
-        [Required]
+        [Required(ErrorMessage = "必填")]
         public string Code { get; set; }
     }
 }
