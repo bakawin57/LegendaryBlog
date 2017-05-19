@@ -1,0 +1,12 @@
+﻿@{ 
+    var config = ViewBag.Config as LegendaryBlog.ViewsModels.BlogConfig;
+}
+                    <!--done-->
+<div class="newsItem">
+    <h3 class="catListTitle">公告</h3>
+    <div id="blog-news">
+        <div id="profile_block">@config.Notic</div>
+    </div>
+    <script type="text/javascript">loadBlogNews();</script>
+</div>
+    <script type="text/javascript">loadBlogSideColumn();</script>

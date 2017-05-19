@@ -165,103 +165,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\BlogDbContext.cs" />
+    <Content Include="App_Code\CustomHtmlHelper.cs" />
+    <Compile Include="App_Code\Tool.cs" />
+    <Compile Include="App_Code\ValidateCode.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\PageController.cs" />
-    <Compile Include="Controllers\PostsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BlogModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BlogModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BlogModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BlogModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BlogModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BlogModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BlogUser.cs">
-      <DependentUpon>BlogModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Comment.cs">
-      <DependentUpon>BlogModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Post.cs">
-      <DependentUpon>BlogModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Tag.cs">
-      <DependentUpon>BlogModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ValidateCode.cs" />
+    <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\Catalog.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\BlogAdd.cs" />
+    <Compile Include="ViewModels\BlogConfig.cs" />
+    <Compile Include="ViewModels\CatalogAdd.cs" />
+    <Compile Include="ViewModels\CatalogModify.cs" />
+    <Compile Include="ViewModels\LoginUser.cs" />
     <Compile Include="ViewModels\RegisterUser.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\app.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\img\0004 .png" />
-    <Content Include="Content\img\0005.png" />
-    <Content Include="Content\img\003.png" />
-    <Content Include="Content\img\004.png" />
-    <Content Include="Content\img\005.png" />
-    <Content Include="Content\img\006.png" />
-    <Content Include="Content\img\007.png" />
-    <Content Include="Content\img\bulb.png" />
-    <Content Include="Content\img\home.png" />
-    <Content Include="Content\img\like.png" />
-    <Content Include="Content\img\mailfront.png" />
-    <Content Include="Content\img\male.png" />
-    <Content Include="Content\img\password.png" />
-    <Content Include="Content\img\pen.png" />
-    <Content Include="Content\img\pencil.png" />
-    <Content Include="Content\img\picasa.png" />
-    <Content Include="Content\img\pika.png" />
-    <Content Include="Content\img\pika1.png" />
-    <Content Include="Content\img\screen.png" />
-    <Content Include="Content\img\search.png" />
-    <Content Include="Content\img\tooptip.png" />
-    <Content Include="Content\img\user.png" />
-    <Content Include="Content\img\yanzheng.png" />
     <Content Include="Database\Blog.mdf" />
     <Content Include="Database\Blog_log.ldf">
       <DependentUpon>Blog.mdf</DependentUpon>
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Models\BlogModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BlogModel.edmx</DependentUpon>
-      <LastGenOutput>BlogModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\BlogModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BlogModel.edmx</DependentUpon>
-      <LastGenOutput>BlogModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\BlogModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BlogModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\BlogModel.edmx.diagram">
-      <DependentUpon>BlogModel.edmx</DependentUpon>
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Code\PostHelper.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -286,16 +223,29 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Posts\Edit.cshtml" />
-    <Content Include="Views\Posts\Index.cshtml" />
-    <Content Include="Views\Posts\Details.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Page\Index.cshtml" />
-    <Content Include="Views\Page\Article.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutPageManage.cshtml" />
+    <Content Include="Views\Shared\_SideBar.cshtml" />
+    <Content Include="Views\Manage\BlogAdd.cshtml" />
+    <Content Include="Views\Manage\CatalogAdd.cshtml" />
+    <Content Include="Views\Manage\CatalogManage.cshtml" />
+    <Content Include="Views\Manage\CatalogModify.cshtml" />
+    <Content Include="Views\Manage\Config.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\Login.cshtml" />
+    <Content Include="Views\Manage\Register.cshtml" />
+    <Content Include="Views\home\Blog.cshtml" />
+    <Content Include="Views\home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Shared\" />
+    <Folder Include="Include\Easyui\" />
+    <Folder Include="Include\images\" />
+    <Folder Include="Include\index_files\" />
+    <Folder Include="Include\js\" />
+    <Folder Include="Include\kindeditor-4.1.7\" />
+    <Folder Include="Include\Scripts\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

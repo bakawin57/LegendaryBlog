@@ -1,0 +1,34 @@
+﻿@model LegendaryBlog.Models.Blog
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="post_detail">
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+               
+
+                        @Model.Title
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body">
+
+                        @Html.Raw(Model.Content)
+                            
+                </div><div id="MySignature"></div>
+                <div class="clear"></div>
+                <div id="blog_post_info_block">
+                    <div id="BlogPostCategory"></div>
+                    <div id="EntryTag"></div>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

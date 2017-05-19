@@ -1,23 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using System.ComponentModel.DataAnnotations;
-namespace LegendaryBlog.ViewModels
+
+namespace LegendaryBlog.ViewsModels
 {
     public class RegisterUser
     {
-        [StringLength(maximumLength:16,MinimumLength =6)]
-        [Required(ErrorMessage = "必填")]
-        public string Username { get; set; }
-        [StringLength(maximumLength:16,MinimumLength =6)]
-        [Required(ErrorMessage = "必填")]
-        public string Password { get; set; }
+        [Required]
         [StringLength(maximumLength: 16, MinimumLength = 6)]
-        [Required(ErrorMessage ="必填")]
-        [Compare("Password",ErrorMessage ="密码必须相同")]
-        public string rePassword { get; set; }
-        [Required(ErrorMessage = "必填")]
-        public string Code { get; set; }
+        public string Name { set; get; }
+
+        [StringLength(maximumLength: 16, MinimumLength = 6)]
+        public string Pwd { set; get; }
+
+        [StringLength(maximumLength: 16, MinimumLength = 6)]
+        [Compare("Pwd")]
+        public string CPwd { set; get; }
+
+        [Required]
+        [StringLength(4)]
+        public string Code { set; get; }
     }
 }
