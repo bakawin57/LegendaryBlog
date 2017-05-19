@@ -1,0 +1,442 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+<title>Home</title>
+<link href="~/Content/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="~/Content/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="~/Content/component.css" rel="stylesheet" type="text/css"  />
+<!--Custom-Theme-files-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Gorgeous Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="~/Content/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="~/Content/eden.css" media="screen">
+    <link rel="stylesheet" href="~/Content/style.css" media="screen">
+    <link href="~/fonts/icons/icons.css" rel="stylesheet">
+    <link href="~/Content/animate.css" rel="stylesheet">
+	
+
+<!--//Custom-Theme-files-->
+<!--js-->
+<script src="~/Scripts/jquery-1.11.1.min.js"></script> 
+<!--//js-->
+
+
+</head>
+<body class="cbp-spmenu-push">
+<div class="banner" id="home">
+		<!--header-->		
+		<div class="header">
+				<div class="logo">
+					<h1><a href="index">传说中的博客</a></h1>
+				</div>
+				<div class="top-nav">
+					<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+						<h3>菜单</h3>
+						<a href="index" class="active scroll">主页</a>
+						<a href="#good" class="scroll">强推</a>
+						<a href="#new" class="scroll">最新</a>
+						<a href="#message" class="scroll">留言</a>
+						<a href="..." class="scroll">博文</a>
+						<a href=".." class="scroll">个人</a>
+					</nav>
+					<div class="main buttonset">	
+							<!-- Class "cbp-spmenu-open" gets applied to menu and "cbp-spmenu-push-toleft" or "cbp-spmenu-push-toright" to the body -->
+							<button id="showRightPush"><img src="~/Content/img/menu.png" alt=""/></button>
+							<!--<span class="menu"></span>-->
+					</div>
+					
+					<script src="~/Scripts/classie.js"></script>
+					<script>
+					
+						var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+						showRightPush = document.getElementById( 'showRightPush' ),
+						body = document.body;
+
+						showRightPush.onclick = function() {
+							classie.toggle( this, 'active' );
+							classie.toggle( body, 'cbp-spmenu-push-toleft' );
+							classie.toggle( menuRight, 'cbp-spmenu-open' );
+							disableOther( 'showRightPush' );
+						};
+
+						function disableOther( button ) {
+							if( button !== 'showRightPush' ) {
+								classie.toggle( showRightPush, 'disabled' );
+							}
+						}
+					</script>
+					<!-- /script-for-menu -->
+				</div>	
+				<div class="clearfix"></div>
+		</div>
+		<!--//header-->
+
+
+	</div>
+	<!--//banner-->
+	
+	    <section class="featured-content-area" id="featured-content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel panel-success panel-featured-content  text-center">
+                        <div class="panel-heading">HTML</div>
+                        <div class="panel-body">
+                            <div class="diamond filled bg-success wow zoomIn" data-wow-delay="500ms">
+                            <img src="~/Content/img/html5.png" style="width:40px;height:40px;text-align:center;"/>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-info panel-featured-content  text-center">
+                        <div class="panel-heading">JAVA</div>
+                        <div class="panel-body">
+                            <div class="diamond filled bg-info wow zoomIn" data-wow-delay="900ms" >
+                                <img src="~/Content/img/java.png" style="width:40px;height:40px;text-align:center;"/>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-primary panel-featured-content  text-center">
+                        <div class="panel-heading">C/C++</div>
+                        <div class="panel-body">
+                            <div class="diamond filled  bg-primary wow zoomIn" data-wow-delay="1300ms" >
+                                <img src="~/Content/img/c.png" style="width:40px;height:40px;text-align:center;"/>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-warning panel-featured-content  text-center">
+                        <div class="panel-heading">SQL</div>
+                        <div class="panel-body">
+                            <div class="diamond filled bg-warning wow zoomIn" data-wow-delay="1700ms" >
+                                <img src="~/Content/img/sql.png" style="width:40px;height:40px;text-align:center;"/>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
+	<section class="good" id="good">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center section-intro">
+                    <h2 class="header-boxed wow zoomIn" data-wow-iteration="1"><span>强推</span></h2>
+                    <p class="lead wow fadeInUp"  data-wow-delay="600ms">少年！来看看我们的强势推荐吧:</p>
+                </div>
+                <div class="col-md-12 highlight-boxes">
+                <div class="col-md-4 wow fadeInLeft" data-wow-delay="500ms">
+                    <div class="featured-content-box text-center">
+                        <i class="tn-heart ico-lg text-warning"></i>
+
+                        <h3>江城子</h3>
+                        <p style="text-align:left;">
+	十年生死两茫茫，写程序，到天亮。千行代码，Bug何处藏。纵使上线又怎样，朝令改，夕断肠。...</p>
+                        <button class="btn btn-warning">Read More </button>
+                    </div>
+                </div>
+                <div class="col-md-4 wow zoomIn" data-wow-delay="100ms">
+                    <div class="featured-content-box text-center">
+                        <i class="tn-server ico-lg text-info"></i>
+
+                        <h3>如何让程序员一直呆浴房里？ </h3>
+                        <p>　给他一瓶洗发香波，上面写着：
+　　for(;;)
+　　{涂抹香波;
+　　...</p>
+                        <button class="btn btn-info">Read More </button>
+                    </div>
+                </div>
+                <div class="col-md-4 wow fadeInRight" data-wow-delay="500ms">
+                    <div class="featured-content-box text-center">
+                        <i class="tn-anchor ico-lg text-success"></i>
+
+                        <h3>实验</h3>
+                        <p>有一个物理学家，工程师和一个程序员驾驶着一辆汽车行驶在阿尔卑斯山脉上，在下山的时候...</p>
+                        <button class="btn btn-primary">Read More </button>
+                    </div>
+                </div>
+                    <div class="col-md-4 wow fadeInUp">
+                        <div class="featured-content-box text-center">
+                            <i class="tn-agenda ico-lg text-danger"></i>
+
+                            <h3>字符串的故事</h3>
+                            <p>两字符串走进一个酒吧坐下，酒保过来，“两位来点什么？”第一个字符串说，“我要一杯...</p>
+                            <button class="btn btn-danger">Read More </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="featured-content-box text-center">
+                            <i class="tn-headphone ico-lg text-warning"></i>
+
+                            <h3>程序员的需求 </h3>
+                            <p> 为API生，为框架死，为debug奋斗一辈子，吃符号亏，上大小写的当,最后死在需求上...</p>
+                            <button class="btn btn-warning">Read More </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="600ms">
+                        <div class="featured-content-box text-center">
+                            <i class="tn-dashboard ico-lg text-info"></i>
+
+                            <h3>程序员眼中的女人</h3>
+                            <p>有的女人就像Windows 虽然很优秀，但是安全隐患太大。有的女人就像UNIX ...</p>
+                            <button class="btn btn-info">Read More </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+	
+		<section class="new" id="new">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center section-intro">
+                    <h2 class="header-boxed wow zoomIn" data-wow-iteration="1"><span>最新</span></h2>
+                    <p class="lead wow fadeInUp" data-wow-delay="200ms">下面是最新博文，爱看不看</p>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="speach">
+                       在应用中处理用户数据是常常发生的事，因此，透明就显得尤为重要。部分用户对于使用我们的服务会心生疑虑，因为他们会怀疑我们用他们的私人数据做一些不太正当的事。而当你的服务对象是政府部门时，这一点更是非常关键。如果代码不是开源的，势必...
+                        <div class="media person">
+                            <div class="pull-left">
+                                <img src="~/Content/img/user.jpg" class="img-circle">
+                            </div>
+                            <div class="media-body">
+                                <b>John Doe</b><br/>
+                                Web Developer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="speach">
+                       不管你使用的是哪一种技术，也不管你做的项目有多小众，可以肯定的是，只要你付出最低限度的努力，在一些论坛或者用户小组中为你的项目做点宣传，就一定会有人对你的项目感兴趣。当你的代码出现第一个分支，你就可以为自己感到骄傲，因为有人觉得...
+					   <div class="media person">
+                            <div class="pull-left">
+                                <img src="~/Content/img/user.jpg" class="img-circle">
+                            </div>
+                            <div class="media-body">
+                                <b>John Doe</b><br/>
+                                Web Developer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="speach">
+                       不管你是独自开发一个项目，还是管理着一群人，随着你的项目越来越大，代码开源都将会给你带来巨大的效益。对你个人来说，你将会更容易获得一份好的工作。因为你的目标公司，可以轻易地浏览到你写的代码和你的思路。同样的道理，如果你经营的公司...
+					   <div class="media person">
+                            <div class="pull-left">
+                                <img src="~/Content/img/user.jpg" class="img-circle">
+                            </div>
+                            <div class="media-body">
+                                <b>John Doe</b><br/>
+                                Web Developer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+                <div class="col-md-4">	<br/>			
+                    <div class="speach">
+                       不管你是独自开发一个项目，还是管理着一群人，随着你的项目越来越大，代码开源都将会给你带来巨大的效益。对你个人来说，你将会更容易获得一份好的工作。因为你的目标公司，可以轻易地浏览到你写的代码和你的思路。同样的道理，如果你经营的公司...
+					   <div class="media person">
+                            <div class="pull-left">
+                                <img src="~/Content/img/user.jpg" class="img-circle">
+                            </div>
+                            <div class="media-body">
+                                <b>John Doe</b><br/>
+                                Web Developer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				 <div class="col-md-4"><br/>
+                    <div class="speach">
+                       不管你是独自开发一个项目，还是管理着一群人，随着你的项目越来越大，代码开源都将会给你带来巨大的效益。对你个人来说，你将会更容易获得一份好的工作。因为你的目标公司，可以轻易地浏览到你写的代码和你的思路。同样的道理，如果你经营的公司...
+					   <div class="media person">
+                            <div class="pull-left">
+                                <img src="~/Content/img/user.jpg" class="img-circle">
+                            </div>
+                            <div class="media-body">
+                                <b>John Doe</b><br/>
+                                Web Developer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-md-4"><br/>
+                    <div class="speach">
+                       不管你是独自开发一个项目，还是管理着一群人，随着你的项目越来越大，代码开源都将会给你带来巨大的效益。对你个人来说，你将会更容易获得一份好的工作。因为你的目标公司，可以轻易地浏览到你写的代码和你的思路。同样的道理，如果你经营的公司...
+					   <div class="media person">
+                            <div class="pull-left">
+                                <img src="~/Content/img/user.jpg" class="img-circle">
+                            </div>
+                            <div class="media-body">
+                                <b>John Doe</b><br/>
+                                Web Developer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
+	
+	
+	
+	
+	
+    
+	    <section class="message" id="message">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12 text-center section-intro">
+        <h2 class="header-boxed wow zoomIn" data-wow-iteration="1"><span>留言板</span></h2>
+        <p class="lead">请留下您想发表的意见，反正我们也不会改</p>
+    </div>
+        <div class="col-md-6">
+            <div class="contact-form wow fadeInLeft">
+            <form class="row" method="get" action="">
+                <div class="col-md-6">
+                    <div class="form-group"><label>昵称<i class="fa fa-asterisk"></i></label> <input type="text" name="name" class="form-control"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group"><label>邮箱<i class="fa fa-asterisk"></i></label> <input type="email" name="email" class="form-control"></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group"><label>留言</label> <textarea name="message" rows="6" class="form-control"></textarea></div>
+                    <div class="send_result"></div>
+                </div>
+                <div class="col-md-12"><input type="submit" value="提交" class="btn btn-primary btn-lg btn-block" name="submit">
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="featured-content-box text-center wow fadeInDown">
+                <div class="circle feature-icon">
+                    <i class="tn-mobile"></i>
+                </div>
+
+                <h3>Phone</h3>
+                <p>0123456789</p>
+
+            </div>
+
+            <div class="featured-content-box text-center wow fadeInUp">
+                <div class="circle feature-icon">
+                    <i class="tn-email"></i>
+                </div>
+
+                <h3>Email</h3>
+                <p>滑稽@qq.com</p>
+
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default panel-subscribe panel-subscribe-narrow panel-subscribe-light panel-subscribe-vert wow fadeInRight">
+                <div class="panel-body">
+                    <div class="media text-center">
+                        <img src="~/Content/img/email2.png">
+                        <div class="media-body">
+                            <h3>申请表</h3>
+                            如果你想成为管理员，可以投一下，我们会根据你的个人信息来决定。
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="First Name" id="fname1" class="form-control">
+                        </div>
+                        <div class="input-group">
+                            <input type="email" placeholder="Your Email" class="form-control">
+                        <span class="input-group-btn">
+                        <button class="btn btn-inverse btn-block" type="submit">提交</button>
+                    </span>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+	
+	
+	
+
+	
+	
+<script src="~/Scripts/jquery-2.1.3.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery.sticky.js"></script>
+<script src="~/Scripts/wow.min.js"></script>
+<script src="~/Scripts/site.js"></script>
+	
+	
+	
+	
+    <!--footer-end-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-top">
+				<div class="col-md-6 footer-left">
+					<h3><a href="index.html">传说中的博客</a></h3>
+				</div>
+				<div class="col-md-6 footer-right">
+					<p>Copyright &copy; 2017.传奇小组制作</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: none;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</div>
+</body>
+</html>
